@@ -17,7 +17,7 @@ const customStyles = {
 // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
 Modal.setAppElement('#root');
 
-const AddMovie = ({add}) => {
+const AddMovie = ({adds}) => {
 
     const [modalIsOpen, setIsOpen] = React.useState(false);
     const [name,setName]=useState('');
@@ -44,7 +44,7 @@ const AddMovie = ({add}) => {
         rating,
         image
       }
-      add(newMovie)
+      adds(newMovie)
       closeModal()
     }
     //handle the rating

@@ -6,13 +6,12 @@ const MovieList = ({movies}) => {
     <div className='Movie-List'>
         {
             movies.map(el=>
-                <MovieCard movies={el} />
+                <MovieCard movie={el} />
                 )
         }
-      </div>
-
-
+    </div>
   )
 }
+
 
 export default MovieList

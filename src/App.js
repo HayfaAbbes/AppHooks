@@ -1,41 +1,40 @@
 import { useState } from 'react';
 import {moviesData} from './data';
-import MovieList from './componets/MovieList';
+import MovieList from './components/MovieList';
 import "./App.css";
-import Search from './componets/Search';
-import AddMovie from './componets/AddMovie';
+import Search from './components/Search';
+import AddMovie from './components/AddMovie';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Details from './components/Details';
+import Home from './Home';
+
 
 function App(){
-    const [movies,setMovies]=useState(moviesData);
-    const [text,setText]=useState('');
-    const [rating,setRating]=useState(1)
-    /*adding movies*/
-    const handleAdd =(newMovie) => setMovies([...movies,newMovie]);
-    //handletext
-    const handletext=(e) => setText(e.target.value)
-    // handle rating
-    const handleRating =(x) =>setRating(x)
-   
   
+const [movies,setMovies]=useState(moviesData);
 
-return(
-    
-    <div className='App'>
-        <Search rating ={rating} 
-        text={text} 
-        handletext={handletext}
-        handleRating={handleRating}
-        />
-        <MovieList 
-        movies={movies.filter((el) =>
-        el.name.toLowerCase().includes(text.toLowerCase().trim())&&
-        el.rating >= rating
-        )}
-        />
-        <AddMovie add={handleAdd}/>
+
+/*adding movies*/
+const handleAdd =(newMovie) => setMovies([...movies,newMovie]);
+
+return( 
+  
+  
+<div className='App'>
+
+
+<Router>
+  <Routes>
+    <Route path="/" element={<Home mv={movies} add={handleAdd}/>}/>
+      <Route path="/detail/:id" element={<Details mvs={movies}/>}/>
       
-       
-    </div>
-)
+  
+   
+    
+  </Routes>
+</Router>
+</div>
+
+);
 }
 export default App;
