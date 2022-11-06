@@ -5,6 +5,7 @@ export const moviesData=   [
             rating: 5,
             name: "Star wars: The Rise of skywalker",
             date: "December 2019",
+            description:"Star wars: The Rise of skywalkerStar wars: The Rise of skywalkerStar wars: The Rise of skywalkerStar wars: The Rise of skywalkervvStar wars: The Rise of skywalkerStar wars: The Rise of skywalkerStar wars: The Rise of skywalkerStar wars: The Rise of skywalker",
            
         },
         {
@@ -13,6 +14,7 @@ export const moviesData=   [
             rating: 4,
             name: "Avengers: infinity war",
             date: "April 2018",
+            description:"Avengers: infinity warAvengers: infinity warAvengers: infinity warAvengers: infinity warAvengers: infinity warAvengers: infinity warAvengers: infinity war",
         },
         {
             id:Math.random(),
@@ -20,6 +22,7 @@ export const moviesData=   [
             rating: 2,
             name: "Forzen 11",
             date: "November 2019",
+            description:"Forzen 11Forzen 11Forzen 11Forzen 11Forzen 11Forzen 11Forzen 11Forzen 11Forzen 11Forzen 11",
         },
         {
             id:Math.random(),
@@ -27,6 +30,7 @@ export const moviesData=   [
             rating: 1,
             name: "Fantastic beasts and where to find them",
             date: "November 2016",
+            description:"Fantastic beasts and where to find themFantastic beasts and where to find themFantastic beasts and where to find themFantastic beasts and where to find themFantastic beasts and where to find themFantastic beasts and where to find them",
         },
     
     
